@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ToyMeet</title>
+    <link rel="stylesheet" href="../Styles/login.css">
+</head>
+<body>
+    <form action="../php/validar_login.php" method="POST">
+        <div class="contenedor-principal">
+            <div class="contenedor">
+                <div class="particion particion-1">
+                    <img src="../images/TOYMEETLOGO.png" width="300px" height="350px" alt="Logo ToyMeet">
+                </div>
+                <div class="particion particion-2">
+                    <br>
+                    <h2>Login</h2>
+                    <br>
+                    <table>
+                        <tr>
+                            <th><img src="../images/login/usuario.png" alt="Icono usuario"></th>
+                            <th><input type="text" name="Nickname" id="Nickname" placeholder="Nickname" required></th>
+                        </tr>
+                        <br>
+                        <tr>
+                            <th><img src="../images/login/contrasena.png" alt="Icono contraseña"></th>
+                            <th><input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required></th>
+                        </tr>
+                    </table>
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <input class="h" type="submit" value="Ingresar" >
+                    <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

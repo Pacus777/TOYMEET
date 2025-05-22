@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Juguete - ToyMeet</title>
+    <link rel="stylesheet" href="../Styles/registro_juguete.css">
+</head>
+<body>
+    <form action="../php/procesar_juguete.php" method="post" enctype="multipart/form-data">
+        <div class="contenedor-principal">
+            <div class="contenedor">
+                <div class="particion particion-1">
+                    <h2>Registrar Juguete</h2>
+                    <table>
+                        <tr>
+                            <th><img src="../images/registro/juguete.png" alt=""></th>
+                            <th><input type="text" name="nombre" maxlength="100" placeholder="Nombre del juguete" required></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/modelado.png" alt=""></th>
+                            <th><input type="text" name="modelado" maxlength="200" placeholder="Modelo 3D (enlace o tipo)"></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/foto.png" alt=""></th>
+                            <th><input type="file" name="fotografia" id="fotografia" accept="image/*" onchange="mostrarPrevisualizacion(event)"></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/carat.png" alt=""></th>
+                            <th><input type="text" name="caracteristicas" maxlength="300" placeholder="Características del juguete"></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/precio.png" alt=""></th>
+                            <th><input type="number" name="precio" step="0.01" placeholder="Precio $" required></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/detalles.png" alt=""></th>
+                            <th><input type="text" name="detalles" maxlength="100" placeholder="Detalles adicionales"></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/marca.png" alt=""></th>
+                            <th><input type="text" name="marca" maxlength="100" placeholder="Marca"></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/estado.png" alt=""></th>
+                            <th><input type="text" name="estado" maxlength="100" placeholder="Estado (Nuevo, Usado, etc.)"></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/cantidad.png" alt=""></th>
+                            <th><input type="number" name="cantidad" placeholder="Cantidad disponible" required></th>
+                        </tr>
+                    </table>
+                    <button class="h" type="submit">Registrar Juguete</button>
+                </div>
+                <div class="particion particion-2">
+                    <img id="previewImagen" src="../images/juguetes/default.png" width="300px" height="350px" alt="Previsualización del juguete">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        function mostrarPrevisualizacion(event) {
+            const input = event.target;
+            const preview = document.getElementById('previewImagen');
+
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>

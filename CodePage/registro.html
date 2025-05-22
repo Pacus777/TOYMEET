@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - ToyMeet</title>
+    <link rel="stylesheet" href="../Styles/registro.css">
+    <script src="../Js/validaciones.js"></script>
+</head>
+<body>
+    <form action="../php/procesar_registro.php" method="get" >
+        <div class="contenedor-principal">
+            <div class="contenedor">
+                <div class="particion particion-1">
+                    <h2>Registrate</h2>
+                    <table>
+                        <tr class="j">
+                            <th><img src="../images/registro/usuario.png" alt=""></th>
+                            <th><input type="text" name="Nickname" id="Nickname" maxlength="50" minlength="8" placeholder="Nickname" required></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/usuario.png" alt=""></th>
+                            <th><input type="text" name="nombre" id="nombre" maxlength="30"  placeholder="Nombre" required></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/contrasena.png" alt=""></th>
+                            <th><input type="password" name="password" id="password" maxlength="50" minlength="8" placeholder="Contraseña" required></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/email.png" alt=""></th>
+                            <th><input type="email" name="email" id="email" maxlength="100"  placeholder="Correo electronico" required></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/apellidos.png" alt=""></th>
+                            <th><input type="text" name="ap_paterno" id="ap_paterno" maxlength="30" placeholder="Apellido paterno"></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/apellidos.png" alt=""></th>
+                            <th><input type="text" name="ap_materno" id="ap_materno" maxlength="30" placeholder="Apellido materno"></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/fecha.png" alt=""></th>
+                            <th ><label for="" style="color: grey; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: lighter; font-size: larger;">Fecha de nacimiento</label></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><input type="date" name="fecha_nac" id="fecha_nac" required></th>
+                        </tr>
+                        <tr>
+                            <th><img src="../images/registro/celular.png" alt=""></th>
+                            <th><input type="tel" name="celular" id="celular" minlength="8" maxlength="30" placeholder="Celular" required></th>
+                        </tr>
+                    </table>
+                    <button class="h"  type="submit"  value="Registrate" onclick="return validaciones(event)">Registrar</button>
+                    
+                    <p>¿Ya tienes una cuenta?. <a href="login.html">Iniciar Sesion</a></p>
+                </div>
+                <div class="particion particion-2">
+                    <img src="../images/TOYMEETLOGO.png" width="300px" height="350px" alt="Logo ToyMeet">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

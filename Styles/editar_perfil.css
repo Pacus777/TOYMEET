@@ -1,0 +1,207 @@
+body {
+    background: linear-gradient(45deg, #2D2B2B, #4A4EAD, #48BDA1, #FF8B2C);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.contenedor-principal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.contenedor {
+    display: flex;
+    border: 2px solid white;
+    width: 900px;
+    height: 700px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.particion {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.particion-1 {
+    
+    background: white;
+    flex: 2; /* Hace que el primer contenedor sea más ancho */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.particion-2 {
+    background: #4A4EAD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1.5;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.perfil-imagen {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 330px;
+    
+    height: 300px;
+}
+
+.foto-perfil {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    
+}
+
+.perfil-imagen label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.perfil-imagen input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.perfil-imagen button {
+    background-color: #FF8B2C;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.perfil-imagen button:hover {
+    background-color: #2D2B2B;
+}
+
+.perfil-imagen p {
+    font-size: 14px;
+    color: #555;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table tr th img {
+    width: 15px;
+    padding-left: 8px;
+}
+
+table tr th input {
+    border: none;
+    padding-left: 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 18px;
+}
+
+table tr th input[type="file"] {
+    padding-left: 0;
+}
+
+button.h {
+    background-color: #2D2B2B;
+    width: 95%;
+    color: white;
+    font-size: 15px;
+    margin-left: 8px;
+    margin-top: 10px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+button.h:hover {
+    background-color: #4A4EAD;
+    color: white;
+}
+
+p {
+    font-size: 11px;
+    text-align: center;
+}
+
+p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+p a:hover {
+    color: #4A4EAD;
+    text-decoration: none;
+}
+
+/* Estilo para el input de fecha deshabilitado */
+input[disabled] {
+    background: transparent;
+    border: none;
+    color: #333;
+}
+
+/* Ajustes para los campos de contraseña */
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Fondo de la sección donde se editan los datos */
+input[type="file"] {
+    margin-top: 10px;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
